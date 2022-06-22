@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  */
 
 public class Coding92334 {
-    // 100점
+    // accuracy 100
     public static int[] solution1(String[] id_list, String[] report, int k) {
         int[] answer = new int[id_list.length];
 
@@ -26,7 +26,7 @@ public class Coding92334 {
         HashMap<String, Integer> counting = new HashMap<>();
         for (int i = 0; i < id_list.length; i++) {
             String user = id_list[i];
-            // user 가 신고한 타겟 카운팅
+            // user 가 신고한 대상 카운팅
             HashMap<String, Integer> check = new HashMap<>();
             for(int n = 0; n < report.length; n++) {
                 if (reporter.get(n).equals(user)) {
@@ -51,7 +51,7 @@ public class Coding92334 {
         // id_list 순서대로 출력
         for (int i = 0; i < id_list.length; i++) {
             String user = id_list[i];
-            // user 가 신고한 타겟 카운팅
+            // user 가 신고한 대상 카운팅
             HashMap<String, Integer> check = new HashMap<>();
             for(int n = 0; n < report.length; n++) {
                 // 해당 user 의 report 정보를 불러온 후 benUsers 에 담겨있는지 확인
@@ -73,7 +73,7 @@ public class Coding92334 {
         return answer;
     }
 
-    // 80점
+    // accuracy 80
     public static int[] solution2(String[] id_list, String[] report, int k) {
         int[] answer = new int[id_list.length];
 
